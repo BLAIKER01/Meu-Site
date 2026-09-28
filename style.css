@@ -1,4 +1,273 @@
-        h1 {
-            color: rgb(12, 100, 0);
-            font-size: 24px;
-        }
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800&family=Rajdhani:wght@400;500;600;700&display=swap');
+:root {
+    --preto: #030605;
+    --preto-card: #07100c;
+    --verde: #39ff14;
+    --verde-escuro: #0b5c16;
+    --verde-brilho: #66ff66;
+    --vermelho: #8b0000;
+    --vermelho-brilho: #ff3131;
+    --cinza: #b8c2ba;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    padding: 40px;
+    min-height: 100vh;
+    background: radial-gradient(circle at 50% 0%, rgba(40, 255, 60, 0.12), transparent 35%), linear-gradient(135deg, #020403, #07100a 50%, #020403);
+    color: var(--cinza);
+    font-family: 'Rajdhani', Arial, sans-serif;
+    font-size: 24px;
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+body::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    background: repeating-linear-gradient( 0deg, rgba(255, 255, 255, 0.015) 0px, rgba(255, 255, 255, 0.015) 1px, transparent 1px, transparent 4px);
+    pointer-events: none;
+    z-index: -1;
+}
+
+h1 {
+    position: relative;
+    margin: 0 auto 40px;
+    padding: 30px;
+    max-width: 1100px;
+    text-align: center;
+    font-family: 'Orbitron', sans-serif;
+    font-size: 48px;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: var(--verde);
+    background: linear-gradient( 145deg, #101d14, #030603);
+    border: 2px solid var(--verde-escuro);
+    border-radius: 14px;
+    box-shadow: 0 0 10px rgba(57, 255, 20, 0.35), 0 0 35px rgba(57, 255, 20, 0.12), inset 0 0 30px rgba(57, 255, 20, 0.08), 0 15px 35px rgba(0, 0, 0, 0.8);
+    transform: perspective(900px) rotateX(2deg);
+}
+
+h1::before {
+    content: "☣";
+    position: absolute;
+    left: 25px;
+    color: var(--vermelho-brilho);
+    text-shadow: 0 0 15px var(--vermelho-brilho);
+}
+
+h1::after {
+    content: "☣";
+    position: absolute;
+    right: 25px;
+    color: var(--vermelho-brilho);
+    text-shadow: 0 0 15px var(--vermelho-brilho);
+}
+
+p {
+    max-width: 1100px;
+    margin: 25px auto;
+    padding: 20px 25px;
+    background: rgba(5, 15, 9, 0.85);
+    border-left: 5px solid var(--verde);
+    border-bottom: 1px solid #174d20;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7), inset 0 0 20px rgba(57, 255, 20, 0.03);
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+p:hover {
+    transform: translateX(8px);
+    border-left-color: var(--verde-brilho);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.9), 0 0 15px rgba(57, 255, 20, 0.15);
+}
+
+b {
+    color: var(--verde-brilho);
+    text-shadow: 0 0 5px rgba(57, 255, 20, 0.6);
+    font-weight: 700;
+}
+
+h2,
+h3,
+h4,
+h5,
+h6 {
+    max-width: 1100px;
+    margin-left: auto;
+    margin-right: auto;
+    font-family: 'Orbitron', sans-serif;
+}
+
+h2 {
+    margin-top: 60px;
+    padding: 25px;
+    font-size: 36px;
+    color: #d8ffd8;
+    background: linear-gradient( 90deg, rgba(57, 255, 20, 0.13), transparent);
+    border-left: 7px solid var(--verde);
+    text-shadow: 0 0 10px rgba(57, 255, 20, 0.4);
+    box-shadow: 0 0 20px rgba(57, 255, 20, 0.08);
+}
+
+h3 {
+    margin-top: 55px;
+    padding: 15px 20px;
+    font-size: 32px;
+    color: var(--verde);
+    border-bottom: 2px solid var(--verde);
+    text-shadow: 0 0 8px rgba(57, 255, 20, 0.6);
+}
+
+h4 {
+    margin-top: 60px;
+    padding: 18px;
+    font-size: 28px;
+    color: var(--vermelho-brilho);
+    background: rgba(80, 0, 0, 0.15);
+    border-left: 6px solid var(--vermelho);
+    text-shadow: 0 0 10px rgba(255, 0, 0, 0.4);
+}
+
+h5 {
+    margin-top: 50px;
+    padding: 20px;
+    font-size: 24px;
+    color: var(--verde);
+    text-align: center;
+    border: 1px dashed var(--verde-escuro);
+    background: rgba(0, 20, 8, 0.7);
+}
+
+h6 {
+    padding: 20px;
+    font-size: 22px;
+    text-align: center;
+    color: #89958c;
+    border-top: 1px solid #174d20;
+}
+
+img {
+    display: block;
+    width: 250px;
+    height: 250px;
+    object-fit: cover;
+    margin: 20px auto 40px;
+    border: 4px solid #173d1d;
+    border-radius: 10px;
+    background: #020402;
+    box-shadow: 0 12px 20px rgba(0, 0, 0, 0.9), 0 0 15px rgba(57, 255, 20, 0.15), inset 0 0 20px rgba(0, 0, 0, 0.8);
+    filter: contrast(1.15) saturate(0.8);
+    transition: transform 0.35s ease, box-shadow 0.35s ease, filter 0.35s ease;
+}
+
+img:hover {
+    transform: perspective(700px) rotateY(-5deg) rotateX(4deg) scale(1.06) translateY(-8px);
+    filter: contrast(1.25) saturate(1.1);
+    border-color: var(--verde);
+    box-shadow: 0 25px 35px rgba(0, 0, 0, 0.9), 0 0 25px rgba(57, 255, 20, 0.35);
+}
+
+body>img:last-child {
+    width: min(1100px, 95%);
+    height: 600px;
+    margin-top: 60px;
+    margin-bottom: 20px;
+    object-fit: cover;
+    border: 4px solid var(--verde);
+    border-radius: 15px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.95), 0 0 35px rgba(57, 255, 20, 0.25), inset 0 0 30px #000;
+    filter: brightness(0.65) contrast(1.25) saturate(0.8);
+    transform: perspective(1200px) rotateX(2deg);
+}
+
+body>img:last-child:hover {
+    transform: perspective(1200px) rotateX(0deg) scale(1.01);
+    filter: brightness(0.8) contrast(1.25) saturate(1);
+}
+
+p:first-of-type {
+    border: 2px solid var(--verde-escuro);
+    border-left: 8px solid var(--verde);
+    background: linear-gradient( 135deg, rgba(20, 50, 25, 0.8), rgba(2, 7, 4, 0.95));
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.8), inset 0 0 25px rgba(57, 255, 20, 0.06);
+}
+
+h4+p {
+    border-left-color: var(--vermelho);
+    background: linear-gradient( 90deg, rgba(100, 0, 0, 0.18), rgba(5, 10, 7, 0.9));
+}
+
+::selection {
+    background: var(--verde);
+    color: #000;
+}
+
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+::-webkit-scrollbar-track {
+    background: #020403;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #14551d;
+    border-radius: 10px;
+    border: 2px solid #020403;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--verde);
+}
+
+@media (max-width: 700px) {
+    body {
+        padding: 15px;
+        font-size: 19px;
+    }
+    ``` h1 {
+        font-size: 30px;
+        padding: 25px 45px;
+    }
+    h1::before,
+    h1::after {
+        display: none;
+    }
+    h2 {
+        font-size: 25px;
+    }
+    h3 {
+        font-size: 23px;
+    }
+    h4 {
+        font-size: 21px;
+    }
+    h5 {
+        font-size: 19px;
+    }
+    h6 {
+        font-size: 18px;
+    }
+    p {
+        padding: 15px;
+    }
+    img {
+        width: 90%;
+        height: auto;
+        max-height: 300px;
+    }
+    body>img:last-child {
+        width: 100%;
+        height: 300px;
+    }
+}
